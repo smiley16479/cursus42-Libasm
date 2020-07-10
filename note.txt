@@ -1,3 +1,5 @@
+Pour MacOS il faut aue les _start soient ecrit : start
+
 Tuto sur githubPage
 
 https://0xax.github.io/asm_3/

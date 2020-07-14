@@ -22,9 +22,9 @@ int main(void)
 	str1[5] = '1';
 	str[5] = '0';
 	char dest[40];
-	//	int a;
-	//	a = ft_strlen("1234");
-	//	printf("\n%d\n",a);
+//		int a;
+//		a = ft_strlen("1234");
+//		printf("\n%d\n",a);
 	//	ft_strcpy(dest, str);
 	//	int	i = -1;
 	//	while (dest[++i])

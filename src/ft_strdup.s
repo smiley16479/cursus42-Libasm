@@ -5,13 +5,15 @@ section .text
 	global ft_strdup
 
 ft_strdup:
+;mov rdx, rdi		;store string's ptr
 call ft_strlen
-mov rcx, rax		;store string's length 
 inc rax
-mov rdx, rdi		;store string's ptr
+push rdi		;ligne ajoute le 16 juillet 12:45
 mov rdi, rax
 call malloc
+pop rsi
 mov rdi, rax
+;mov rsi, rdx		;restore string's ptr in second arg for ft_strcpy
 call ft_strcpy
 ret
 

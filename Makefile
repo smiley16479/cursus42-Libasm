@@ -11,12 +11,8 @@
 # **************************************************************************** #
 
 NAME = libasm.a
-
-# LIB_DIR = $(shell find lib -type d -maxdepth 1 | grep 'lib/')
-# INC_DIR = $(shell find includes -type d) $(foreach dir, $(LIB_DIR), $(shell find -f $(dir)/includes -type d))
-
 SRC_DIR = src
-OBJ_DIR = obj
+OBJ_DIR = obj_tmp
 
 SRC = 			ft_read.s	ft_strcmp.s	\
 				ft_strcpy.s	ft_strdup.s	\
@@ -48,22 +44,10 @@ show	:
 ## $^ = les dependances de la regle
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.s
 	@mkdir -p $(OBJ_DIR)
-	@nasm $(CFLAG) $(IFLAG) -c $< -o $@
+	@nasm $(CFLAG) $< -o $@
 
 $(NAME)	: $(OBJ)
-	@gcc $(OBJ) $(CFLAG) $(IFLAG) $(LFLAG) -o $@
-
-
-debug : $(NAME)
-	@./$(NAME)
-
-install :
-#	make -C lib/libft
-#	make -C lib/mlx
-
-re-install :
-#	make -C lib/libft re
-#	make -C lib/mlx re
+	@ar rcs $@ $<
 
 clean	:
 	@rm -f $(OBJ)

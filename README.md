@@ -1,3 +1,5 @@
+# LIBASM
+
 Pour MacOS il faut aue les _start soient ecrit : start
 Pour compiler il faut tranformer en object avec nasm : nasm -f elf64 file.s
 puis linker avec ld ou gcc, pour appeler une fonction de la lib C il faut utiliser l'option : -no-pie

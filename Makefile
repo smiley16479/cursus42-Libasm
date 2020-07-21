@@ -6,7 +6,7 @@
 #    By: adtheus <adtheus@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/09 23:20:17 by adtheus           #+#    #+#              #
-#    Updated: 2020/07/20 18:23:29 by user42           ###   ########.fr        #
+#    Updated: 2020/07/21 11:47:12 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ CFLAG = -f elf64
 all		: $(NAME)
 
 $(NAME)	: $(OBJ)
-	ar rcs $@ $^ # $<
+	@ar rcs $@ $^ # $<
 
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.s
 	@mkdir -p $(OBJ_DIR)

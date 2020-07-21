@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 18:01:26 by user42            #+#    #+#             */
-/*   Updated: 2020/07/20 18:22:12 by user42           ###   ########.fr       */
+/*   Updated: 2020/07/21 11:48:41 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <fcntl.h>
 #include <errno.h>
 
-#include "libasm.h"
+#include "src/libasm.h"
 
 int main(void)
 {
